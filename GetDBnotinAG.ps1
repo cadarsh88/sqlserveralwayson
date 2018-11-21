@@ -26,17 +26,17 @@
             3. AG are configured with Auto Failover Capability
     .EXAMPLE
         -CREATE NEW AVAILABILITY GROUP -Full usage of parameters
-        .\SetupAG.ps1 -PrimaryReplicaName "ORF-SQL14-20" -SecondaryReplicaNames "ORF-SQL14-21,ORF-SQL14-22" -DB_NAMES "NUM104,NUM105,NUM106" -AvailabilityGroupName "AvailabilityGroup"
+        .\SetupAG.ps1 -PrimaryReplicaName "srv1" -SecondaryReplicaNames "srv2,srv3" -DB_NAMES "NUM104,NUM105,NUM106" -AvailabilityGroupName "AvailabilityGroup"
     
         -CREATE NEW AVAILABILITY GROUP by Specifying only Primary Replica and DB Names. 
         Adds the requested databases to already existing availability group if it has lesser than 100 databases and can fit all requested databases.
-        .\SetupAG.ps1 -PrimaryReplicaName "ORF-SQL14-20" -DB_NAMES "NUM104,NUM105,NUM106" 
+        .\SetupAG.ps1 -PrimaryReplicaName "srv1" -DB_NAMES "NUM104,NUM105,NUM106" 
 
         -One can specify AG name to add the databases into. 
-        .\SetupAG.ps1 -PrimaryReplicaName "ORF-SQL14-20" -DB_NAMES "NUM104,NUM105,NUM106" -AvailabilityGroupName "AvailabilityGroup2" 
+        .\SetupAG.ps1 -PrimaryReplicaName "srv1" -DB_NAMES "NUM104,NUM105,NUM106" -AvailabilityGroupName "AvailabilityGroup2" 
         
         -Create Availability Group with default name, AvailabilityGroup[number]. If there are no existing AGs, then this script creates AG with name AvailabilityGroup1
-        .\SetupAG.ps1 -PrimaryReplicaName "ORF-SQL14-20" -SecondaryReplicaNames "ORF-SQL14-21,ORF-SQL14-22" -DB_NAMES "NUM104,NUM105,NUM106"
+        .\SetupAG.ps1 -PrimaryReplicaName "srv" -SecondaryReplicaNames "srv2,srv3" -DB_NAMES "NUM104,NUM105,NUM106"
 
     .PARAMETER PrimaryReplicaName
     The Primary Replica hosting SQL Instance Name. This field is mandatory. 
