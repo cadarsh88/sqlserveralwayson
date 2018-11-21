@@ -36,7 +36,7 @@
         .\SetupAG.ps1 -PrimaryReplicaName "srv1" -DB_NAMES "NUM104,NUM105,NUM106" -AvailabilityGroupName "AvailabilityGroup2" 
         
         -Create Availability Group with default name, AvailabilityGroup[number]. If there are no existing AGs, then this script creates AG with name AvailabilityGroup1
-        .\SetupAG.ps1 -PrimaryReplicaName "srv1" -SecondaryReplicaNames "ORF-SQL14-21,ORF-SQL14-22" -DB_NAMES "NUM104,NUM105,NUM106"
+        .\SetupAG.ps1 -PrimaryReplicaName "srv1" -SecondaryReplicaNames "srv2,srv3" -DB_NAMES "NUM104,NUM105,NUM106"
 
     .PARAMETER PrimaryReplicaName
     The Primary Replica hosting SQL Instance Name. This field is mandatory. 
